@@ -1,0 +1,72 @@
+|mgbte
+AlB <= lpm_compare:mgl_prim1.AlB
+dataa[0] => dataa[0]~3.IN1
+dataa[1] => dataa[1]~2.IN1
+dataa[2] => dataa[2]~1.IN1
+dataa[3] => dataa[3]~0.IN1
+datab[0] => ~NO_FANOUT~
+datab[1] => ~NO_FANOUT~
+datab[2] => ~NO_FANOUT~
+datab[3] => ~NO_FANOUT~
+
+
+|mgbte|lpm_compare:mgl_prim1
+dataa[0] => comptree:comparator.datab[0]
+dataa[1] => comptree:comparator.datab[1]
+dataa[2] => comptree:comparator.datab[2]
+dataa[3] => comptree:comparator.datab[3]
+datab[0] => comptree:comparator.dataa[0]
+datab[1] => comptree:comparator.dataa[1]
+datab[2] => comptree:comparator.dataa[2]
+datab[3] => comptree:comparator.dataa[3]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= agb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb~0.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~1.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb~1.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb~1.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mgbte|lpm_compare:mgl_prim1|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb~0.DB_MAX_OUTPUT_PORT_TYPE
+agb <= cmpchain:cmp_end.agb
+
+
+|mgbte|lpm_compare:mgl_prim1|comptree:comparator|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb~0.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mgbte|lpm_compare:mgl_prim1|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mgbte|lpm_compare:mgl_prim1|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

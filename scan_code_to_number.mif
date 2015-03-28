@@ -1,0 +1,56 @@
+-- Copyright (C) 1991-2009 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=4;
+DEPTH=256;
+
+ADDRESS_RADIX=BIN;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+	[000000000..001110110]  :   0;
+	001110111  :   1;
+	[001111000..001111010]  :   0;
+	001111011  :   4;
+	001111100  :   0;
+	001111101  :   7;
+	001111110  :   E;
+	[001111111..010110110]  :   0;
+	010110111  :   2;
+	[010111000..010111010]  :   0;
+	010111011  :   5;
+	010111100  :   0;
+	010111101  :   8;
+	[010111110..011010110]  :   0;
+	011010111  :   3;
+	[011011000..011011010]  :   0;
+	011011011  :   6;
+	011011100  :   0;
+	011011101  :   9;
+	011011110  :   0;
+	011011111  :   F;
+	[011100000..011100110]  :   0;
+	011100111  :   A;
+	[011101000..011101010]  :   0;
+	011101011  :   B;
+	011101100  :   0;
+	011101101  :   C;
+	011101110  :   0;
+	011101111  :   D;
+	[011110000..011110111]  :   0;
+	011111000  :   8;
+	[011111001..011111111]  :   0;
+END;

@@ -1,0 +1,95 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+# Date created = 12:44:52  February 28, 2015
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		course_project_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY FLEX10K
+set_global_assignment -name DEVICE "EPF10K10QC208-4"
+set_global_assignment -name TOP_LEVEL_ENTITY course_project
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:44:52  FEBRUARY 28, 2015"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name QIP_FILE counter.qip
+set_global_assignment -name QIP_FILE debug_constant.qip
+set_global_assignment -name BDF_FILE course_project.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE course_project.vwf
+set_global_assignment -name QIP_FILE and_14.qip
+set_global_assignment -name QIP_FILE inv_14.qip
+set_global_assignment -name QIP_FILE counter15.qip
+set_global_assignment -name QIP_FILE counter17.qip
+set_global_assignment -name QIP_FILE cmp16.qip
+set_global_assignment -name QIP_FILE cmp16100k.qip
+set_global_assignment -name QIP_FILE mux_dac.qip
+set_global_assignment -name QIP_FILE oxff.qip
+set_global_assignment -name QIP_FILE ox00.qip
+set_global_assignment -name QIP_FILE decod.qip
+set_global_assignment -name QIP_FILE lock.qip
+set_global_assignment -name QIP_FILE div666.qip
+set_global_assignment -name QIP_FILE ss.qip
+set_global_assignment -name QIP_FILE div5.qip
+set_global_assignment -name QIP_FILE inv4.qip
+set_global_assignment -name QIP_FILE nor_14.qip
+set_global_assignment -name QIP_FILE reg4.qip
+set_global_assignment -name QIP_FILE mux2_4.qip
+set_global_assignment -name QIP_FILE clk2.qip
+set_global_assignment -name QIP_FILE or8_bitvise.qip
+set_global_assignment -name QIP_FILE const0x30.qip
+set_global_assignment -name QIP_FILE mux2_1.qip
+set_global_assignment -name QIP_FILE mux2_1_1.qip
+set_global_assignment -name MIF_FILE ../laba6/course_project.mif
+set_global_assignment -name MIF_FILE ../laba6/Mif2.mif
+set_global_assignment -name QIP_FILE ../laba6/lcd_data_mem.qip
+set_global_assignment -name QIP_FILE dec_cnt.qip
+set_global_assignment -name BDF_FILE dec_cnt_div.bdf
+set_global_assignment -name QIP_FILE or4_bus.qip
+set_global_assignment -name QIP_FILE shift_left_14.qip
+set_global_assignment -name QIP_FILE add_14.qip
+set_global_assignment -name QIP_FILE dff_14.qip
+set_global_assignment -name QIP_FILE mux2_14.qip
+set_global_assignment -name QIP_FILE const_2.qip
+set_global_assignment -name MIF_FILE scan_code_to_number.mif
+set_global_assignment -name QIP_FILE rom_kb_map.qip
+set_global_assignment -name QIP_FILE cnt_10.qip
+set_global_assignment -name QIP_FILE cnt_mod_10.qip
+set_global_assignment -name QIP_FILE dbg_const_1.qip
+set_global_assignment -name QIP_FILE dbg_const_0.qip
+set_global_assignment -name QIP_FILE and4_bus.qip
+set_global_assignment -name QIP_FILE cmp10.qip
+set_global_assignment -name MIF_FILE lcd_mem_init.mif
+set_global_assignment -name QIP_FILE lcd_init_mem.qip

@@ -1,0 +1,956 @@
+Fitter report for course_project
+Sat Mar 28 09:37:02 2015
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Fitter Device Options
+  6. Input Pins
+  7. Output Pins
+  8. All Package Pins
+  9. Control Signals
+ 10. Global & Other Fast Signals
+ 11. Carry Chains
+ 12. Cascade Chains
+ 13. Embedded Cells
+ 14. Non-Global High Fan-Out Signals
+ 15. Peripheral Signals
+ 16. LAB
+ 17. Local Routing Interconnect
+ 18. LAB External Interconnect
+ 19. Row Interconnect
+ 20. LAB Column Interconnect
+ 21. LAB Column Interconnect
+ 22. Fitter Resource Usage Summary
+ 23. Fitter Resource Utilization by Entity
+ 24. Delay Chain Summary
+ 25. Fitter RAM Summary
+ 26. Pin-Out File
+ 27. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------+
+; Fitter Summary                                                       ;
++-----------------------+----------------------------------------------+
+; Fitter Status         ; Successful - Sat Mar 28 09:37:02 2015        ;
+; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name         ; course_project                               ;
+; Top-level Entity Name ; course_project                               ;
+; Family                ; FLEX10K                                      ;
+; Device                ; EPF10K10QC208-4                              ;
+; Timing Models         ; Final                                        ;
+; Total logic elements  ; 209 / 576 ( 36 % )                           ;
+; Total pins            ; 36 / 134 ( 27 % )                            ;
+; Total memory bits     ; 1,280 / 6,144 ( 21 % )                       ;
++-----------------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                      ;
++------------------------------------------------------------+--------------------+--------------------+
+; Option                                                     ; Setting            ; Default Value      ;
++------------------------------------------------------------+--------------------+--------------------+
+; Device                                                     ; EPF10K10QC208-4    ;                    ;
+; Use smart compilation                                      ; Off                ; Off                ;
+; Use TimeQuest Timing Analyzer                              ; Off                ; Off                ;
+; Router Timing Optimization Level                           ; Normal             ; Normal             ;
+; Placement Effort Multiplier                                ; 1.0                ; 1.0                ;
+; Router Effort Multiplier                                   ; 1.0                ; 1.0                ;
+; Optimize Timing                                            ; Normal compilation ; Normal compilation ;
+; Optimize Timing for ECOs                                   ; Off                ; Off                ;
+; Regenerate full fit report during ECO compiles             ; Off                ; Off                ;
+; Optimize IOC Register Placement for Timing                 ; On                 ; On                 ;
+; Limit to One Fitting Attempt                               ; Off                ; Off                ;
+; Final Placement Optimizations                              ; Automatically      ; Automatically      ;
+; Fitter Aggressive Routability Optimizations                ; Automatically      ; Automatically      ;
+; Fitter Initial Placement Seed                              ; 1                  ; 1                  ;
+; Slow Slew Rate                                             ; Off                ; Off                ;
+; Auto Global Memory Control Signals                         ; Off                ; Off                ;
+; Logic Cell Insertion - Individual Logic Cells              ; On                 ; On                 ;
+; Logic Cell Insertion - I/Os Fed By Carry or Cascade Chains ; On                 ; On                 ;
+; Fitter Effort                                              ; Auto Fit           ; Auto Fit           ;
+; Auto Global Clock                                          ; On                 ; On                 ;
+; Auto Global Output Enable                                  ; On                 ; On                 ;
+; Auto Global Register Control Signals                       ; On                 ; On                 ;
+; Force Fitter to Avoid Periphery Placement Warnings         ; Off                ; Off                ;
++------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------+
+; Fitter Device Options                                                   ;
++----------------------------------------------+--------------------------+
+; Option                                       ; Setting                  ;
++----------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
+; Enable device-wide output enable (DEV_OE)    ; Off                      ;
+; Enable INIT_DONE output                      ; Off                      ;
+; Configuration scheme                         ; Passive Serial           ;
+; nWS, nRS, nCS, CS                            ; Unreserved               ;
+; RDYnBUSY                                     ; Unreserved               ;
+; Data[7..1]                                   ; Unreserved               ;
+; Reserve all unused pins                      ; As output driving ground ;
+; Base pin-out file on sameframe device        ; Off                      ;
++----------------------------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                ;
++-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
+; Name      ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; Single-Pin CE ; I/O Standard ;
++-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
+; MHZCLK    ; 38    ;  C  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; RESET     ; 184   ; --  ; --   ; 61      ; yes    ; no           ; no                      ; no            ; no            ; TTL          ;
+; CLK       ; 79    ; --  ; --   ; 15      ; yes    ; no           ; no                      ; no            ; no            ; TTL          ;
+; generator ; 41    ;  C  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; row0      ; 78    ; --  ; --   ; 2       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; row1      ; 80    ; --  ; --   ; 2       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; row2      ; 12    ;  A  ; --   ; 2       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; row3      ; 183   ; --  ; --   ; 2       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
++-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                             ;
++-------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
+; Name        ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
++-------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
+; DAC_WR      ; 39    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; col0        ; 147   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; col1        ; 150   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; col3        ; 148   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; col2        ; 144   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DAC_DATA[7] ; 31    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DAC_DATA[6] ; 27    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DAC_DATA[5] ; 132   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DAC_DATA[4] ; 134   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DAC_DATA[3] ; 30    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DAC_DATA[2] ; 135   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DAC_DATA[1] ; 136   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DAC_DATA[0] ; 131   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DIV[3]      ; 133   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DIV[2]      ; 26    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DIV[1]      ; 25    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DIV[0]      ; 24    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; LCD_DATA[7] ; 116   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; LCD_DATA[6] ; 115   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; LCD_DATA[5] ; 112   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; LCD_DATA[4] ; 111   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; LCD_DATA[3] ; 40    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; LCD_DATA[2] ; 121   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; LCD_DATA[1] ; 44    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; LCD_DATA[0] ; 119   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; DAC_CS      ; 58    ; --  ; 21   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; R/W         ; 176   ; --  ; 11   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; LCD_E       ; 203   ; --  ; 21   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
++-------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
+
+
++------------------------------------+
+; All Package Pins                   ;
++-------+-------------+--------------+
+; Pin # ; Usage       ; I/O Standard ;
++-------+-------------+--------------+
+; 1     ; #TCK        ;              ;
+; 2     ; ^CONF_DONE  ;              ;
+; 3     ; ^nCEO       ;              ;
+; 4     ; #TDO        ;              ;
+; 5     ; VCC_IO      ;              ;
+; 6     ; VCC_INT     ;              ;
+; 7     ; NC          ;              ;
+; 8     ; NC          ;              ;
+; 9     ; NC          ;              ;
+; 10    ; GND*        ;              ;
+; 11    ; GND*        ;              ;
+; 12    ; row2        ; TTL          ;
+; 13    ; GND*        ;              ;
+; 14    ; NC          ;              ;
+; 15    ; NC          ;              ;
+; 16    ; GND*        ;              ;
+; 17    ; GND*        ;              ;
+; 18    ; GND*        ;              ;
+; 19    ; GND*        ;              ;
+; 20    ; GND_IO      ;              ;
+; 21    ; GND_INT     ;              ;
+; 22    ; VCC_IO      ;              ;
+; 23    ; VCC_INT     ;              ;
+; 24    ; DIV[0]      ; TTL          ;
+; 25    ; DIV[1]      ; TTL          ;
+; 26    ; DIV[2]      ; TTL          ;
+; 27    ; DAC_DATA[6] ; TTL          ;
+; 28    ; GND*        ;              ;
+; 29    ; GND*        ;              ;
+; 30    ; DAC_DATA[3] ; TTL          ;
+; 31    ; DAC_DATA[7] ; TTL          ;
+; 32    ; GND_IO      ;              ;
+; 33    ; GND_INT     ;              ;
+; 34    ; VCC_IO      ;              ;
+; 35    ; VCC_INT     ;              ;
+; 36    ; NC          ;              ;
+; 37    ; NC          ;              ;
+; 38    ; MHZCLK      ; TTL          ;
+; 39    ; DAC_WR      ; TTL          ;
+; 40    ; LCD_DATA[3] ; TTL          ;
+; 41    ; generator   ; TTL          ;
+; 42    ; VCC_IO      ;              ;
+; 43    ; VCC_INT     ;              ;
+; 44    ; LCD_DATA[1] ; TTL          ;
+; 45    ; GND*        ;              ;
+; 46    ; GND*        ;              ;
+; 47    ; GND*        ;              ;
+; 48    ; GND_IO      ;              ;
+; 49    ; GND_INT     ;              ;
+; 50    ; #TMS        ;              ;
+; 51    ; #TRST       ;              ;
+; 52    ; ^nSTATUS    ;              ;
+; 53    ; GND*        ;              ;
+; 54    ; GND*        ;              ;
+; 55    ; GND*        ;              ;
+; 56    ; GND*        ;              ;
+; 57    ; GND*        ;              ;
+; 58    ; DAC_CS      ; TTL          ;
+; 59    ; GND_IO      ;              ;
+; 60    ; GND*        ;              ;
+; 61    ; GND*        ;              ;
+; 62    ; GND*        ;              ;
+; 63    ; GND*        ;              ;
+; 64    ; GND*        ;              ;
+; 65    ; GND*        ;              ;
+; 66    ; VCC_IO      ;              ;
+; 67    ; GND*        ;              ;
+; 68    ; GND*        ;              ;
+; 69    ; GND*        ;              ;
+; 70    ; GND*        ;              ;
+; 71    ; GND*        ;              ;
+; 72    ; GND_IO      ;              ;
+; 73    ; GND*        ;              ;
+; 74    ; GND*        ;              ;
+; 75    ; GND*        ;              ;
+; 76    ; VCC_INT     ;              ;
+; 77    ; VCC_INT     ;              ;
+; 78    ; row0        ; TTL          ;
+; 79    ; CLK         ; TTL          ;
+; 80    ; row1        ; TTL          ;
+; 81    ; GND_INT     ;              ;
+; 82    ; GND_INT     ;              ;
+; 83    ; GND*        ;              ;
+; 84    ; VCC_IO      ;              ;
+; 85    ; GND*        ;              ;
+; 86    ; GND*        ;              ;
+; 87    ; GND*        ;              ;
+; 88    ; GND*        ;              ;
+; 89    ; GND*        ;              ;
+; 90    ; GND*        ;              ;
+; 91    ; GND_IO      ;              ;
+; 92    ; GND*        ;              ;
+; 93    ; GND*        ;              ;
+; 94    ; GND*        ;              ;
+; 95    ; GND*        ;              ;
+; 96    ; GND*        ;              ;
+; 97    ; GND*        ;              ;
+; 98    ; VCC_IO      ;              ;
+; 99    ; GND*        ;              ;
+; 100   ; GND*        ;              ;
+; 101   ; GND*        ;              ;
+; 102   ; GND*        ;              ;
+; 103   ; GND*        ;              ;
+; 104   ; GND*        ;              ;
+; 105   ; ^nCONFIG    ;              ;
+; 106   ; VCC_INT     ;              ;
+; 107   ; ^MSEL1      ;              ;
+; 108   ; ^MSEL0      ;              ;
+; 109   ; VCC_INT     ;              ;
+; 110   ; VCC_IO      ;              ;
+; 111   ; LCD_DATA[4] ; TTL          ;
+; 112   ; LCD_DATA[5] ; TTL          ;
+; 113   ; NC          ;              ;
+; 114   ; NC          ;              ;
+; 115   ; LCD_DATA[6] ; TTL          ;
+; 116   ; LCD_DATA[7] ; TTL          ;
+; 117   ; VCC_INT     ;              ;
+; 118   ; VCC_IO      ;              ;
+; 119   ; LCD_DATA[0] ; TTL          ;
+; 120   ; GND*        ;              ;
+; 121   ; LCD_DATA[2] ; TTL          ;
+; 122   ; GND*        ;              ;
+; 123   ; GND_INT     ;              ;
+; 124   ; GND_IO      ;              ;
+; 125   ; NC          ;              ;
+; 126   ; NC          ;              ;
+; 127   ; GND*        ;              ;
+; 128   ; GND*        ;              ;
+; 129   ; GND_INT     ;              ;
+; 130   ; GND_IO      ;              ;
+; 131   ; DAC_DATA[0] ; TTL          ;
+; 132   ; DAC_DATA[5] ; TTL          ;
+; 133   ; DIV[3]      ; TTL          ;
+; 134   ; DAC_DATA[4] ; TTL          ;
+; 135   ; DAC_DATA[2] ; TTL          ;
+; 136   ; DAC_DATA[1] ; TTL          ;
+; 137   ; VCC_INT     ;              ;
+; 138   ; VCC_IO      ;              ;
+; 139   ; NC          ;              ;
+; 140   ; NC          ;              ;
+; 141   ; GND*        ;              ;
+; 142   ; GND*        ;              ;
+; 143   ; GND*        ;              ;
+; 144   ; col2        ; TTL          ;
+; 145   ; VCC_INT     ;              ;
+; 146   ; VCC_IO      ;              ;
+; 147   ; col0        ; TTL          ;
+; 148   ; col3        ; TTL          ;
+; 149   ; GND*        ;              ;
+; 150   ; col1        ; TTL          ;
+; 151   ; GND_INT     ;              ;
+; 152   ; GND_IO      ;              ;
+; 153   ; #TDI        ;              ;
+; 154   ; ^nCE        ;              ;
+; 155   ; ^DCLK       ;              ;
+; 156   ; ^DATA0      ;              ;
+; 157   ; GND*        ;              ;
+; 158   ; GND*        ;              ;
+; 159   ; GND*        ;              ;
+; 160   ; GND*        ;              ;
+; 161   ; GND*        ;              ;
+; 162   ; GND*        ;              ;
+; 163   ; GND*        ;              ;
+; 164   ; GND*        ;              ;
+; 165   ; VCC_IO      ;              ;
+; 166   ; GND*        ;              ;
+; 167   ; GND*        ;              ;
+; 168   ; GND*        ;              ;
+; 169   ; GND*        ;              ;
+; 170   ; GND*        ;              ;
+; 171   ; GND_IO      ;              ;
+; 172   ; GND*        ;              ;
+; 173   ; GND*        ;              ;
+; 174   ; GND*        ;              ;
+; 175   ; GND*        ;              ;
+; 176   ; R/W         ; TTL          ;
+; 177   ; GND*        ;              ;
+; 178   ; VCC_IO      ;              ;
+; 179   ; GND*        ;              ;
+; 180   ; GND*        ;              ;
+; 181   ; VCC_INT     ;              ;
+; 182   ; GND+        ;              ;
+; 183   ; row3        ; TTL          ;
+; 184   ; RESET       ; TTL          ;
+; 185   ; GND_INT     ;              ;
+; 186   ; GND*        ;              ;
+; 187   ; GND*        ;              ;
+; 188   ; GND_IO      ;              ;
+; 189   ; GND*        ;              ;
+; 190   ; GND*        ;              ;
+; 191   ; GND*        ;              ;
+; 192   ; GND*        ;              ;
+; 193   ; GND*        ;              ;
+; 194   ; VCC_IO      ;              ;
+; 195   ; GND*        ;              ;
+; 196   ; GND*        ;              ;
+; 197   ; GND*        ;              ;
+; 198   ; GND*        ;              ;
+; 199   ; GND*        ;              ;
+; 200   ; GND*        ;              ;
+; 201   ; GND_IO      ;              ;
+; 202   ; GND*        ;              ;
+; 203   ; LCD_E       ; TTL          ;
+; 204   ; GND*        ;              ;
+; 205   ; GND*        ;              ;
+; 206   ; GND*        ;              ;
+; 207   ; GND*        ;              ;
+; 208   ; GND*        ;              ;
++-------+-------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------------------------------------------------+---------+---------+----------------------+--------------+
+; Name                                                                                                                                         ; Pin #   ; Fan-Out ; Usage                ; Global Usage ;
++----------------------------------------------------------------------------------------------------------------------------------------------+---------+---------+----------------------+--------------+
+; inst42~1                                                                                                                                     ; LC8_B1  ; 22      ; Async. clear         ; Non-global   ;
+; inst82                                                                                                                                       ; LC1_B23 ; 16      ; Async. load          ; Non-global   ;
+; cnt_mod_10:inst68|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[3]                                                      ; LC4_B21 ; 5       ; Clock                ; Non-global   ;
+; cnt_mod_10:inst66|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[3]                                                      ; LC4_B19 ; 14      ; Clock                ; Non-global   ;
+; cnt_mod_10:inst70|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[3]                                                      ; LC7_B18 ; 5       ; Clock                ; Non-global   ;
+; RESET                                                                                                                                        ; 184     ; 61      ; Async. clear         ; Pin          ;
+; counter15:inst15|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]                                                       ; LC7_A3  ; 3       ; Clock                ; Non-global   ;
+; counter15:inst15|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[3]                                                       ; LC4_A3  ; 2       ; Clock                ; Non-global   ;
+; CLK                                                                                                                                          ; 79      ; 15      ; Clock                ; Pin          ;
+; inst93                                                                                                                                       ; LC1_C23 ; 36      ; Clock                ; Internal     ;
+; inst32~0                                                                                                                                     ; LC1_A2  ; 3       ; Async. clear         ; Non-global   ;
+; div5:inst30|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[2]                                                            ; LC4_A2  ; 10      ; Clock                ; Non-global   ;
+; inst23~1                                                                                                                                     ; LC1_B18 ; 10      ; Clock enable         ; Non-global   ;
+; inst16~1                                                                                                                                     ; LC6_B21 ; 10      ; Clock enable         ; Non-global   ;
+; inst58~7_wirecell                                                                                                                            ; LC1_B13 ; 8       ; Clock enable         ; Non-global   ;
+; and4_bus:inst28|lpm_and:lpm_and_component|and_node[0][1]                                                                                     ; LC7_B22 ; 6       ; Clock / Clock enable ; Non-global   ;
+; decod:inst91|lpm_decode:lpm_decode_component|decode_cre:auto_generated|cmpr_tlc:cmpr4|result_wire[0]~2                                       ; LC6_B22 ; 4       ; Clock                ; Non-global   ;
+; decod:inst91|lpm_decode:lpm_decode_component|decode_cre:auto_generated|cmpr_tlc:cmpr4|result_wire[0]~3                                       ; LC5_B22 ; 4       ; Clock                ; Non-global   ;
+; decod:inst91|lpm_decode:lpm_decode_component|decode_cre:auto_generated|cmpr_tlc:cmpr4|result_wire[0]~4                                       ; LC8_B22 ; 4       ; Clock                ; Non-global   ;
+; inst46                                                                                                                                       ; LC1_A1  ; 2       ; Clock                ; Non-global   ;
+; div5:inst30|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end|aeb_out ; LC5_A2  ; 3       ; Sync. load           ; Non-global   ;
+; inst58~6                                                                                                                                     ; LC1_B14 ; 4       ; Clock enable         ; Non-global   ;
++----------------------------------------------------------------------------------------------------------------------------------------------+---------+---------+----------------------+--------------+
+
+
++-------------------------------------+
+; Global & Other Fast Signals         ;
++--------+---------+---------+--------+
+; Name   ; Pin #   ; Fan-Out ; Global ;
++--------+---------+---------+--------+
+; RESET  ; 184     ; 61      ; yes    ;
+; CLK    ; 79      ; 15      ; yes    ;
+; inst93 ; LC1_C23 ; 36      ; yes    ;
+; row0   ; 78      ; 2       ; no     ;
+; row1   ; 80      ; 2       ; no     ;
+; row3   ; 183     ; 2       ; no     ;
++--------+---------+---------+--------+
+
+
++---------------------------------------------+
+; Carry Chains                                ;
++--------------------+------------------------+
+; Carry Chain Length ; Number of Carry Chains ;
++--------------------+------------------------+
+; 0                  ; 0                      ;
+; 1                  ; 0                      ;
+; 2                  ; 1                      ;
+; 3                  ; 1                      ;
+; 4                  ; 7                      ;
+; 5                  ; 0                      ;
+; 6                  ; 0                      ;
+; 7                  ; 0                      ;
+; 8                  ; 0                      ;
+; 9                  ; 0                      ;
+; 10                 ; 0                      ;
+; 11                 ; 0                      ;
+; 12                 ; 0                      ;
+; 13                 ; 0                      ;
+; 14                 ; 0                      ;
+; 15                 ; 0                      ;
+; 16                 ; 1                      ;
+; 17                 ; 1                      ;
++--------------------+------------------------+
+
+
++----------------+
+; Cascade Chains ;
++--------+-------+
+; Length ; Count ;
++--------+-------+
+; 2      ; 9     ;
++--------+-------+
+
+
++----------------------------------------------------------------------------------------+
+; Embedded Cells                                                                         ;
++--------+----------------------------------------------------------------+------+-------+
+; Cell # ; Name                                                           ; Mode ; Turbo ;
++--------+----------------------------------------------------------------+------+-------+
+; EC3_A  ; rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom|q[3]   ; RAM  ; Off   ;
+; EC2_A  ; rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom|q[2]   ; RAM  ; Off   ;
+; EC4_A  ; rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom|q[1]   ; RAM  ; Off   ;
+; EC1_A  ; rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom|q[0]   ; RAM  ; Off   ;
+; EC8_C  ; lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom|q[7] ; RAM  ; Off   ;
+; EC7_C  ; lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom|q[6] ; RAM  ; Off   ;
+; EC4_C  ; lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom|q[5] ; RAM  ; Off   ;
+; EC3_C  ; lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom|q[4] ; RAM  ; Off   ;
+; EC2_C  ; lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom|q[2] ; RAM  ; Off   ;
+; EC1_C  ; lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom|q[0] ; RAM  ; Off   ;
+; EC6_C  ; lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom|q[3] ; RAM  ; Off   ;
+; EC5_C  ; lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom|q[1] ; RAM  ; Off   ;
++--------+----------------------------------------------------------------+------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                                                                                                                                      ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                                                                                                                                       ; Fan-Out ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; inst42~2                                                                                                                                                                                                                   ; 22      ;
+; inst82~0                                                                                                                                                                                                                   ; 16      ;
+; cnt_mod_10:inst66|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[3]~0                                                                                                                                  ; 14      ;
+; cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|cmpchain:gt_cmp_end|agb_out~1 ; 13      ;
+; counter15:inst15|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|cout~0                                                                                                                                   ; 13      ;
+; clk2:inst90|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT                                                                                                                          ; 13      ;
+; cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|cmpchain:gt_cmp_end|agb_out~1     ; 13      ;
+; clk2:inst90|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1]~0                                                                                                                                        ; 12      ;
+; ~GND~0                                                                                                                                                                                                                     ; 11      ;
+; div5:inst30|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[2]~0                                                                                                                                        ; 10      ;
+; inst23~2                                                                                                                                                                                                                   ; 10      ;
+; inst16~2                                                                                                                                                                                                                   ; 10      ;
+; counter15:inst15|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[10]~COUT                                                                                                                    ; 9       ;
+; counter15:inst15|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[11]~COUT                                                                                                                    ; 9       ;
+; inst58~7_wirecell                                                                                                                                                                                                          ; 8       ;
+; nor_14:inst48|lpm_or:lpm_or_component|or_node[0][3]~1                                                                                                                                                                      ; 8       ;
+; and4_bus:inst28|lpm_and:lpm_and_component|and_node[0][1]~0                                                                                                                                                                 ; 6       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[15]~COUT                                                                                                                    ; 5       ;
+; rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom|q[2]                                                                                                                                                               ; 5       ;
+; rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom|q[1]                                                                                                                                                               ; 5       ;
+; rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom|q[3]                                                                                                                                                               ; 5       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT                                                                                                                     ; 5       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[11]~COUT                                                                                                                    ; 5       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[10]~COUT                                                                                                                    ; 5       ;
+; cnt_mod_10:inst68|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[3]~0                                                                                                                                  ; 5       ;
+; cnt_mod_10:inst70|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[3]~0                                                                                                                                  ; 5       ;
+; cnt_mod_10:inst66|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[3]~2                                                                                                                       ; 4       ;
+; counter15:inst15|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[6]~COUT                                                                                                                     ; 4       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[13]~COUT                                                                                                                    ; 4       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[12]~COUT                                                                                                                    ; 4       ;
+; rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom|q[0]                                                                                                                                                               ; 4       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[14]~COUT                                                                                                                    ; 4       ;
+; inst58~12                                                                                                                                                                                                                  ; 4       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[16]~0                                                                                                                                  ; 4       ;
+; cnt_mod_10:inst70|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[3]~2                                                                                                                       ; 4       ;
+; cnt_mod_10:inst68|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[3]~2                                                                                                                       ; 4       ;
+; lock:inst21|lpm_ff:lpm_ff_component|dffs[3]~4                                                                                                                                                                              ; 4       ;
+; lock:inst21|lpm_ff:lpm_ff_component|dffs[1]~2                                                                                                                                                                              ; 4       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT                                                                                                                     ; 4       ;
+; lock:inst21|lpm_ff:lpm_ff_component|dffs[2]~3                                                                                                                                                                              ; 4       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[9]~COUT                                                                                                                     ; 4       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[7]~COUT                                                                                                                     ; 4       ;
+; decod:inst91|lpm_decode:lpm_decode_component|decode_cre:auto_generated|cmpr_tlc:cmpr4|result_wire[0]~7                                                                                                                     ; 4       ;
+; lock:inst21|lpm_ff:lpm_ff_component|dffs[0]~1                                                                                                                                                                              ; 4       ;
+; decod:inst91|lpm_decode:lpm_decode_component|decode_cre:auto_generated|cmpr_tlc:cmpr4|result_wire[0]~5                                                                                                                     ; 4       ;
+; decod:inst91|lpm_decode:lpm_decode_component|decode_cre:auto_generated|cmpr_tlc:cmpr4|result_wire[0]~6                                                                                                                     ; 4       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT                                                                                                                     ; 4       ;
+; counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT                                                                                                                     ; 4       ;
+; lock:inst22|lpm_ff:lpm_ff_component|dffs[1]~6                                                                                                                                                                              ; 4       ;
+; lock:inst22|lpm_ff:lpm_ff_component|dffs[3]~8                                                                                                                                                                              ; 4       ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------+
+; Peripheral Signals                                                                           ;
++-------------------+---------+-------+-----------------+---------------------------+----------+
+; Peripheral Signal ; Source  ; Usage ; Dedicated Clock ; Peripheral Control Signal ; Polarity ;
++-------------------+---------+-------+-----------------+---------------------------+----------+
+; inst93            ; LC1_C23 ; Clock ; no              ; yes                       ; +ve      ;
++-------------------+---------+-------+-----------------+---------------------------+----------+
+
+
++-------------------------------------------+
+; LAB                                       ;
++--------------------------+----------------+
+; Number of Logic Elements ; Number of LABs ;
++--------------------------+----------------+
+; 0                        ; 35             ;
+; 1                        ; 7              ;
+; 2                        ; 1              ;
+; 3                        ; 1              ;
+; 4                        ; 2              ;
+; 5                        ; 0              ;
+; 6                        ; 6              ;
+; 7                        ; 7              ;
+; 8                        ; 13             ;
++--------------------------+----------------+
+
+
++----------------------------------------------+
+; Local Routing Interconnect                   ;
++-----------------------------+----------------+
+; Local Routing Interconnects ; Number of LABs ;
++-----------------------------+----------------+
+; 0                           ; 49             ;
+; 1                           ; 1              ;
+; 2                           ; 3              ;
+; 3                           ; 4              ;
+; 4                           ; 2              ;
+; 5                           ; 4              ;
+; 6                           ; 5              ;
+; 7                           ; 4              ;
++-----------------------------+----------------+
+
+
++---------------------------------------------+
+; LAB External Interconnect                   ;
++----------------------------+----------------+
+; LAB External Interconnects ; Number of LABs ;
++----------------------------+----------------+
+; 0                          ; 41             ;
+; 1                          ; 1              ;
+; 2                          ; 5              ;
+; 3                          ; 5              ;
+; 4                          ; 5              ;
+; 5                          ; 4              ;
+; 6                          ; 3              ;
+; 7                          ; 1              ;
+; 8                          ; 4              ;
+; 9                          ; 1              ;
+; 10                         ; 0              ;
+; 11                         ; 1              ;
+; 12                         ; 0              ;
+; 13                         ; 0              ;
+; 14                         ; 0              ;
+; 15                         ; 1              ;
++----------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Row Interconnect                                                                        ;
++-------+--------------------+-----------------------------+------------------------------+
+; Row   ; Interconnect Used  ; Left Half Interconnect Used ; Right Half Interconnect Used ;
++-------+--------------------+-----------------------------+------------------------------+
+;  A    ;  6 / 96 ( 6 % )    ;  17 / 48 ( 35 % )           ;  0 / 48 ( 0 % )              ;
+;  B    ;  16 / 96 ( 17 % )  ;  5 / 48 ( 10 % )            ;  31 / 48 ( 65 % )            ;
+;  C    ;  16 / 96 ( 17 % )  ;  7 / 48 ( 15 % )            ;  37 / 48 ( 77 % )            ;
+; Total ;  38 / 288 ( 13 % ) ;  29 / 144 ( 20 % )          ;  68 / 144 ( 47 % )           ;
++-------+--------------------+-----------------------------+------------------------------+
+
+
++---------------------------+
+; LAB Column Interconnect   ;
++-------+-------------------+
+; Col.  ; Interconnect Used ;
++-------+-------------------+
+; 1     ;  0 / 24 ( 0 % )   ;
+; 2     ;  1 / 24 ( 4 % )   ;
+; 3     ;  0 / 24 ( 0 % )   ;
+; 4     ;  0 / 24 ( 0 % )   ;
+; 5     ;  0 / 24 ( 0 % )   ;
+; 6     ;  1 / 24 ( 4 % )   ;
+; 7     ;  0 / 24 ( 0 % )   ;
+; 8     ;  0 / 24 ( 0 % )   ;
+; 9     ;  0 / 24 ( 0 % )   ;
+; 10    ;  0 / 24 ( 0 % )   ;
+; 11    ;  1 / 24 ( 4 % )   ;
+; 12    ;  0 / 24 ( 0 % )   ;
+; 13    ;  0 / 24 ( 0 % )   ;
+; 14    ;  0 / 24 ( 0 % )   ;
+; 15    ;  0 / 24 ( 0 % )   ;
+; 16    ;  0 / 24 ( 0 % )   ;
+; 17    ;  0 / 24 ( 0 % )   ;
+; 18    ;  0 / 24 ( 0 % )   ;
+; 19    ;  0 / 24 ( 0 % )   ;
+; 20    ;  3 / 24 ( 13 % )  ;
+; 21    ;  0 / 24 ( 0 % )   ;
+; 22    ;  1 / 24 ( 4 % )   ;
+; 23    ;  0 / 24 ( 0 % )   ;
+; 24    ;  1 / 24 ( 4 % )   ;
+; Total ;  8 / 576 ( 1 % )  ;
++-------+-------------------+
+
+
++---------------------------+
+; LAB Column Interconnect   ;
++-------+-------------------+
+; Col.  ; Interconnect Used ;
++-------+-------------------+
+; 1     ;  4 / 24 ( 17 % )  ;
+; Total ;  4 / 24 ( 17 % )  ;
++-------+-------------------+
+
+
++------------------------------------------------------------+
+; Fitter Resource Usage Summary                              ;
++-----------------------------------+------------------------+
+; Resource                          ; Usage                  ;
++-----------------------------------+------------------------+
+; Total logic elements              ; 209 / 576 ( 36 % )     ;
+; Registers                         ; 91 / 576 ( 16 % )      ;
+; Logic elements in carry chains    ; 66                     ;
+; User inserted logic elements      ; 0                      ;
+; I/O pins                          ; 36 / 134 ( 27 % )      ;
+;     -- Clock pins                 ; 2 / 2 ( 100 % )        ;
+;     -- Dedicated input pins       ; 4 / 4 ( 100 % )        ;
+; Global signals                    ; 3                      ;
+; EABs                              ; 2 / 3 ( 67 % )         ;
+; Total memory bits                 ; 1,280 / 6,144 ( 21 % ) ;
+; Total RAM block bits              ; 4,096 / 6,144 ( 67 % ) ;
+; Maximum fan-out node              ; ~GND                   ;
+; Maximum fan-out                   ; 83                     ;
+; Highest non-global fan-out signal ; ~GND                   ;
+; Highest non-global fan-out        ; 83                     ;
+; Total fan-out                     ; 705                    ;
+; Average fan-out                   ; 2.74                   ;
++-----------------------------------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                        ;
++-----------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                          ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                                                                                              ; Library Name ;
++-----------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |course_project                                     ; 209 (22)    ; 91           ; 1280        ; 36   ; 118 (20)     ; 22 (2)            ; 69 (0)           ; 66 (0)          ; 0 (0)      ; |course_project                                                                                                                                                                                                                  ; work         ;
+;    |and4_bus:inst28|                                ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|and4_bus:inst28                                                                                                                                                                                                  ; work         ;
+;       |lpm_and:lpm_and_component|                   ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|and4_bus:inst28|lpm_and:lpm_and_component                                                                                                                                                                        ; work         ;
+;    |clk2:inst90|                                    ; 2 (0)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |course_project|clk2:inst90                                                                                                                                                                                                      ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 2 (0)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |course_project|clk2:inst90|lpm_counter:lpm_counter_component                                                                                                                                                                    ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 2 (2)           ; 0 (0)      ; |course_project|clk2:inst90|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                                     ; work         ;
+;    |cmp10:inst38|                                   ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp10:inst38                                                                                                                                                                                                     ; work         ;
+;       |lpm_compare:lpm_compare_component|           ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp10:inst38|lpm_compare:lpm_compare_component                                                                                                                                                                   ; work         ;
+;          |comptree:comparator|                      ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp10:inst38|lpm_compare:lpm_compare_component|comptree:comparator                                                                                                                                               ; work         ;
+;             |cmpchain:cmp_end|                      ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp10:inst38|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                                                                                              ; work         ;
+;    |cmp16100k:inst8|                                ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8                                                                                                                                                                                                  ; work         ;
+;       |lpm_compare:lpm_compare_component|           ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component                                                                                                                                                                ; work         ;
+;          |comptree:comparator|                      ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator                                                                                                                                            ; work         ;
+;             |cmpchain:cmp_end|                      ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                                                                                           ; work         ;
+;                |comptree:comp|                      ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp                                                                                                             ; work         ;
+;                   |cmpchain:cmp[0]|                 ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                                                                                             ; work         ;
+;                   |cmpchain:cmp[1]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]                                                                                             ; work         ;
+;                   |cmpchain:cmp[2]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]                                                                                             ; work         ;
+;                   |cmpchain:cmp[3]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]                                                                                             ; work         ;
+;                   |cmpchain:cmp[4]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]                                                                                             ; work         ;
+;                   |cmpchain:cmp[5]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]                                                                                             ; work         ;
+;                   |cmpchain:cmp[6]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]                                                                                             ; work         ;
+;                   |cmpchain:cmp[7]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]                                                                                             ; work         ;
+;                   |cmpchain:cmp_end|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end                                                                                            ; work         ;
+;                   |comptree:sub_comptree|           ; 12 (0)      ; 0            ; 0           ; 0    ; 12 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                                                                                       ; work         ;
+;                      |cmpchain:cmp[0]|              ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]                                                                       ; work         ;
+;                      |cmpchain:cmp[1]|              ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]                                                                       ; work         ;
+;                      |cmpchain:cmp[2]|              ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[2]                                                                       ; work         ;
+;                      |cmpchain:cmp[3]|              ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[3]                                                                       ; work         ;
+;                      |comptree:sub_comptree|        ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree                                                                 ; work         ;
+;                         |cmpchain:cmp[0]|           ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp[0]                                                 ; work         ;
+;                         |cmpchain:cmp[1]|           ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp[1]                                                 ; work         ;
+;                         |comptree:sub_comptree|     ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree                                           ; work         ;
+;                            |cmpchain:cmp[0]|        ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp[0]                           ; work         ;
+;                            |comptree:sub_comptree|  ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree                     ; work         ;
+;                               |cmpchain:gt_cmp_end| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16100k:inst8|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|cmpchain:gt_cmp_end ; work         ;
+;    |cmp16:inst4|                                    ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4                                                                                                                                                                                                      ; work         ;
+;       |lpm_compare:lpm_compare_component|           ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component                                                                                                                                                                    ; work         ;
+;          |comptree:comparator|                      ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator                                                                                                                                                ; work         ;
+;             |cmpchain:cmp_end|                      ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                                                                                               ; work         ;
+;                |comptree:comp|                      ; 29 (0)      ; 0            ; 0           ; 0    ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp                                                                                                                 ; work         ;
+;                   |cmpchain:cmp[0]|                 ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                                                                                                 ; work         ;
+;                   |cmpchain:cmp[1]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]                                                                                                 ; work         ;
+;                   |cmpchain:cmp[2]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]                                                                                                 ; work         ;
+;                   |cmpchain:cmp[3]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]                                                                                                 ; work         ;
+;                   |cmpchain:cmp[4]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]                                                                                                 ; work         ;
+;                   |cmpchain:cmp[5]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]                                                                                                 ; work         ;
+;                   |cmpchain:cmp[6]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]                                                                                                 ; work         ;
+;                   |cmpchain:cmp[7]|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]                                                                                                 ; work         ;
+;                   |cmpchain:cmp_end|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end                                                                                                ; work         ;
+;                   |comptree:sub_comptree|           ; 12 (0)      ; 0            ; 0           ; 0    ; 12 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                                                                                           ; work         ;
+;                      |cmpchain:cmp[0]|              ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]                                                                           ; work         ;
+;                      |cmpchain:cmp[1]|              ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]                                                                           ; work         ;
+;                      |cmpchain:cmp[2]|              ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[2]                                                                           ; work         ;
+;                      |cmpchain:cmp[3]|              ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[3]                                                                           ; work         ;
+;                      |comptree:sub_comptree|        ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree                                                                     ; work         ;
+;                         |cmpchain:cmp[0]|           ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp[0]                                                     ; work         ;
+;                         |cmpchain:cmp[1]|           ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp[1]                                                     ; work         ;
+;                         |comptree:sub_comptree|     ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree                                               ; work         ;
+;                            |cmpchain:cmp[0]|        ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp[0]                               ; work         ;
+;                            |comptree:sub_comptree|  ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree                         ; work         ;
+;                               |cmpchain:gt_cmp_end| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cmp16:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|comptree:sub_comptree|cmpchain:gt_cmp_end     ; work         ;
+;    |cnt_10:inst2|                                   ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_10:inst2                                                                                                                                                                                                     ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_10:inst2|lpm_counter:lpm_counter_component                                                                                                                                                                   ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |course_project|cnt_10:inst2|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                                    ; work         ;
+;    |cnt_10:inst41|                                  ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_10:inst41                                                                                                                                                                                                    ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_10:inst41|lpm_counter:lpm_counter_component                                                                                                                                                                  ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |course_project|cnt_10:inst41|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                                   ; work         ;
+;    |cnt_10:inst57|                                  ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_10:inst57                                                                                                                                                                                                    ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_10:inst57|lpm_counter:lpm_counter_component                                                                                                                                                                  ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |course_project|cnt_10:inst57|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                                   ; work         ;
+;    |cnt_10:inst63|                                  ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_10:inst63                                                                                                                                                                                                    ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_10:inst63|lpm_counter:lpm_counter_component                                                                                                                                                                  ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |course_project|cnt_10:inst63|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                                   ; work         ;
+;    |cnt_mod_10:inst66|                              ; 6 (0)       ; 4            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst66                                                                                                                                                                                                ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 6 (0)       ; 4            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst66|lpm_counter:lpm_counter_component                                                                                                                                                              ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 6 (5)       ; 4            ; 0           ; 0    ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |course_project|cnt_mod_10:inst66|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                               ; work         ;
+;             |lpm_compare:$00011|                    ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst66|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011                                                                                                            ; work         ;
+;                |comptree:comparator|                ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst66|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011|comptree:comparator                                                                                        ; work         ;
+;                   |cmpchain:cmp_end|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst66|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011|comptree:comparator|cmpchain:cmp_end                                                                       ; work         ;
+;    |cnt_mod_10:inst68|                              ; 6 (0)       ; 4            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst68                                                                                                                                                                                                ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 6 (0)       ; 4            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst68|lpm_counter:lpm_counter_component                                                                                                                                                              ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 6 (5)       ; 4            ; 0           ; 0    ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |course_project|cnt_mod_10:inst68|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                               ; work         ;
+;             |lpm_compare:$00011|                    ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst68|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011                                                                                                            ; work         ;
+;                |comptree:comparator|                ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst68|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011|comptree:comparator                                                                                        ; work         ;
+;                   |cmpchain:cmp_end|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst68|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011|comptree:comparator|cmpchain:cmp_end                                                                       ; work         ;
+;    |cnt_mod_10:inst70|                              ; 6 (0)       ; 4            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst70                                                                                                                                                                                                ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 6 (0)       ; 4            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst70|lpm_counter:lpm_counter_component                                                                                                                                                              ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 6 (5)       ; 4            ; 0           ; 0    ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |course_project|cnt_mod_10:inst70|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                               ; work         ;
+;             |lpm_compare:$00011|                    ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst70|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011                                                                                                            ; work         ;
+;                |comptree:comparator|                ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst70|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011|comptree:comparator                                                                                        ; work         ;
+;                   |cmpchain:cmp_end|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|cnt_mod_10:inst70|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011|comptree:comparator|cmpchain:cmp_end                                                                       ; work         ;
+;    |counter15:inst15|                               ; 16 (0)      ; 15           ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 15 (0)           ; 16 (0)          ; 0 (0)      ; |course_project|counter15:inst15                                                                                                                                                                                                 ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 16 (0)      ; 15           ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 15 (0)           ; 16 (0)          ; 0 (0)      ; |course_project|counter15:inst15|lpm_counter:lpm_counter_component                                                                                                                                                               ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 16 (16)     ; 15           ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 15 (15)          ; 16 (16)         ; 0 (0)      ; |course_project|counter15:inst15|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                                ; work         ;
+;    |counter17:inst20|                               ; 17 (0)      ; 17           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 17 (0)           ; 17 (0)          ; 0 (0)      ; |course_project|counter17:inst20                                                                                                                                                                                                 ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 17 (0)      ; 17           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 17 (0)           ; 17 (0)          ; 0 (0)      ; |course_project|counter17:inst20|lpm_counter:lpm_counter_component                                                                                                                                                               ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 17 (17)     ; 17           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 17 (17)          ; 17 (17)         ; 0 (0)      ; |course_project|counter17:inst20|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                                ; work         ;
+;    |decod:inst18|                                   ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|decod:inst18                                                                                                                                                                                                     ; work         ;
+;       |lpm_decode:lpm_decode_component|             ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|decod:inst18|lpm_decode:lpm_decode_component                                                                                                                                                                     ; work         ;
+;          |decode_cre:auto_generated|                ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|decod:inst18|lpm_decode:lpm_decode_component|decode_cre:auto_generated                                                                                                                                           ; work         ;
+;             |cmpr_tlc:cmpr4|                        ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|decod:inst18|lpm_decode:lpm_decode_component|decode_cre:auto_generated|cmpr_tlc:cmpr4                                                                                                                            ; work         ;
+;    |decod:inst91|                                   ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|decod:inst91                                                                                                                                                                                                     ; work         ;
+;       |lpm_decode:lpm_decode_component|             ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|decod:inst91|lpm_decode:lpm_decode_component                                                                                                                                                                     ; work         ;
+;          |decode_cre:auto_generated|                ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|decod:inst91|lpm_decode:lpm_decode_component|decode_cre:auto_generated                                                                                                                                           ; work         ;
+;             |cmpr_tlc:cmpr4|                        ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|decod:inst91|lpm_decode:lpm_decode_component|decode_cre:auto_generated|cmpr_tlc:cmpr4                                                                                                                            ; work         ;
+;    |div5:inst30|                                    ; 4 (0)       ; 3            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 3 (0)            ; 3 (0)           ; 0 (0)      ; |course_project|div5:inst30                                                                                                                                                                                                      ; work         ;
+;       |lpm_counter:lpm_counter_component|           ; 4 (0)       ; 3            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 3 (0)            ; 3 (0)           ; 0 (0)      ; |course_project|div5:inst30|lpm_counter:lpm_counter_component                                                                                                                                                                    ; work         ;
+;          |alt_counter_f10ke:wysi_counter|           ; 4 (3)       ; 3            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 3 (3)            ; 3 (3)           ; 0 (0)      ; |course_project|div5:inst30|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                                                     ; work         ;
+;             |lpm_compare:$00010|                    ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|div5:inst30|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010                                                                                                                  ; work         ;
+;                |comptree:comparator|                ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|div5:inst30|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator                                                                                              ; work         ;
+;                   |cmpchain:cmp_end|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|div5:inst30|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end                                                                             ; work         ;
+;    |lcd_init_mem:inst49|                            ; 0 (0)       ; 0            ; 256         ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|lcd_init_mem:inst49                                                                                                                                                                                              ; work         ;
+;       |lpm_rom:lpm_rom_component|                   ; 0 (0)       ; 0            ; 256         ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|lcd_init_mem:inst49|lpm_rom:lpm_rom_component                                                                                                                                                                    ; work         ;
+;          |altrom:srom|                              ; 0 (0)       ; 0            ; 256         ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom                                                                                                                                                        ; work         ;
+;    |lock:inst21|                                    ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|lock:inst21                                                                                                                                                                                                      ; work         ;
+;       |lpm_ff:lpm_ff_component|                     ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |course_project|lock:inst21|lpm_ff:lpm_ff_component                                                                                                                                                                              ; work         ;
+;    |lock:inst22|                                    ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|lock:inst22                                                                                                                                                                                                      ; work         ;
+;       |lpm_ff:lpm_ff_component|                     ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|lock:inst22|lpm_ff:lpm_ff_component                                                                                                                                                                              ; work         ;
+;    |mux2_1:inst52|                                  ; 12 (0)      ; 0            ; 0           ; 0    ; 12 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52                                                                                                                                                                                                    ; work         ;
+;       |lpm_mux:lpm_mux_component|                   ; 12 (0)      ; 0            ; 0           ; 0    ; 12 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52|lpm_mux:lpm_mux_component                                                                                                                                                                          ; work         ;
+;          |muxlut:$00009|                            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52|lpm_mux:lpm_mux_component|muxlut:$00009                                                                                                                                                            ; work         ;
+;          |muxlut:$00011|                            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52|lpm_mux:lpm_mux_component|muxlut:$00011                                                                                                                                                            ; work         ;
+;          |muxlut:$00013|                            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52|lpm_mux:lpm_mux_component|muxlut:$00013                                                                                                                                                            ; work         ;
+;          |muxlut:$00015|                            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52|lpm_mux:lpm_mux_component|muxlut:$00015                                                                                                                                                            ; work         ;
+;          |muxlut:$00017|                            ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52|lpm_mux:lpm_mux_component|muxlut:$00017                                                                                                                                                            ; work         ;
+;          |muxlut:$00019|                            ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52|lpm_mux:lpm_mux_component|muxlut:$00019                                                                                                                                                            ; work         ;
+;          |muxlut:$00021|                            ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52|lpm_mux:lpm_mux_component|muxlut:$00021                                                                                                                                                            ; work         ;
+;          |muxlut:$00023|                            ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_1:inst52|lpm_mux:lpm_mux_component|muxlut:$00023                                                                                                                                                            ; work         ;
+;    |mux2_4:inst47|                                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_4:inst47                                                                                                                                                                                                    ; work         ;
+;       |lpm_mux:lpm_mux_component|                   ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_4:inst47|lpm_mux:lpm_mux_component                                                                                                                                                                          ; work         ;
+;          |muxlut:$00009|                            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_4:inst47|lpm_mux:lpm_mux_component|muxlut:$00009                                                                                                                                                            ; work         ;
+;          |muxlut:$00011|                            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_4:inst47|lpm_mux:lpm_mux_component|muxlut:$00011                                                                                                                                                            ; work         ;
+;          |muxlut:$00013|                            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_4:inst47|lpm_mux:lpm_mux_component|muxlut:$00013                                                                                                                                                            ; work         ;
+;          |muxlut:$00015|                            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|mux2_4:inst47|lpm_mux:lpm_mux_component|muxlut:$00015                                                                                                                                                            ; work         ;
+;    |nor_14:inst33|                                  ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|nor_14:inst33                                                                                                                                                                                                    ; work         ;
+;       |lpm_or:lpm_or_component|                     ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|nor_14:inst33|lpm_or:lpm_or_component                                                                                                                                                                            ; work         ;
+;    |nor_14:inst39|                                  ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|nor_14:inst39                                                                                                                                                                                                    ; work         ;
+;       |lpm_or:lpm_or_component|                     ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|nor_14:inst39|lpm_or:lpm_or_component                                                                                                                                                                            ; work         ;
+;    |nor_14:inst48|                                  ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|nor_14:inst48                                                                                                                                                                                                    ; work         ;
+;       |lpm_or:lpm_or_component|                     ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|nor_14:inst48|lpm_or:lpm_or_component                                                                                                                                                                            ; work         ;
+;    |reg4:inst34|                                    ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|reg4:inst34                                                                                                                                                                                                      ; work         ;
+;       |lpm_ff:lpm_ff_component|                     ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|reg4:inst34|lpm_ff:lpm_ff_component                                                                                                                                                                              ; work         ;
+;    |reg4:inst35|                                    ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|reg4:inst35                                                                                                                                                                                                      ; work         ;
+;       |lpm_ff:lpm_ff_component|                     ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|reg4:inst35|lpm_ff:lpm_ff_component                                                                                                                                                                              ; work         ;
+;    |reg4:inst36|                                    ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|reg4:inst36                                                                                                                                                                                                      ; work         ;
+;       |lpm_ff:lpm_ff_component|                     ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|reg4:inst36|lpm_ff:lpm_ff_component                                                                                                                                                                              ; work         ;
+;    |reg4:inst45|                                    ; 4 (0)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|reg4:inst45                                                                                                                                                                                                      ; work         ;
+;       |lpm_ff:lpm_ff_component|                     ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|reg4:inst45|lpm_ff:lpm_ff_component                                                                                                                                                                              ; work         ;
+;    |rom_kb_map:inst37|                              ; 0 (0)       ; 0            ; 1024        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|rom_kb_map:inst37                                                                                                                                                                                                ; work         ;
+;       |lpm_rom:lpm_rom_component|                   ; 0 (0)       ; 0            ; 1024        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|rom_kb_map:inst37|lpm_rom:lpm_rom_component                                                                                                                                                                      ; work         ;
+;          |altrom:srom|                              ; 0 (0)       ; 0            ; 1024        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |course_project|rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom                                                                                                                                                          ; work         ;
++-----------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------+
+; Delay Chain Summary                  ;
++-------------+----------+-------------+
+; Name        ; Pin Type ; Pad to Core ;
++-------------+----------+-------------+
+; MHZCLK      ; Input    ; OFF         ;
+; RESET       ; Input    ; OFF         ;
+; CLK         ; Input    ; OFF         ;
+; generator   ; Input    ; OFF         ;
+; row0        ; Input    ; OFF         ;
+; row1        ; Input    ; OFF         ;
+; row2        ; Input    ; OFF         ;
+; row3        ; Input    ; OFF         ;
+; DAC_WR      ; Output   ; OFF         ;
+; DAC_CS      ; Output   ; OFF         ;
+; col0        ; Output   ; OFF         ;
+; col1        ; Output   ; OFF         ;
+; col3        ; Output   ; OFF         ;
+; col2        ; Output   ; OFF         ;
+; R/W         ; Output   ; OFF         ;
+; LCD_E       ; Output   ; OFF         ;
+; DAC_DATA[7] ; Output   ; OFF         ;
+; DAC_DATA[6] ; Output   ; OFF         ;
+; DAC_DATA[5] ; Output   ; OFF         ;
+; DAC_DATA[4] ; Output   ; OFF         ;
+; DAC_DATA[3] ; Output   ; OFF         ;
+; DAC_DATA[2] ; Output   ; OFF         ;
+; DAC_DATA[1] ; Output   ; OFF         ;
+; DAC_DATA[0] ; Output   ; OFF         ;
+; DIV[3]      ; Output   ; OFF         ;
+; DIV[2]      ; Output   ; OFF         ;
+; DIV[1]      ; Output   ; OFF         ;
+; DIV[0]      ; Output   ; OFF         ;
+; LCD_DATA[7] ; Output   ; OFF         ;
+; LCD_DATA[6] ; Output   ; OFF         ;
+; LCD_DATA[5] ; Output   ; OFF         ;
+; LCD_DATA[4] ; Output   ; OFF         ;
+; LCD_DATA[3] ; Output   ; OFF         ;
+; LCD_DATA[2] ; Output   ; OFF         ;
+; LCD_DATA[1] ; Output   ; OFF         ;
+; LCD_DATA[0] ; Output   ; OFF         ;
++-------------+----------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                            ;
++-------------------------------------------------------------------+------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-------------------------+----------+
+; Name                                                              ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; EABs ; MIF                     ; Location ;
++-------------------------------------------------------------------+------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-------------------------+----------+
+; lcd_init_mem:inst49|lpm_rom:lpm_rom_component|altrom:srom|content ; ROM  ; 32           ; 8            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 256  ; 1    ; lcd_mem_init.mif        ; ESB_C    ;
+; rom_kb_map:inst37|lpm_rom:lpm_rom_component|altrom:srom|content   ; ROM  ; 256          ; 4            ; --           ; --           ; no                     ; no                      ; --                     ; --                      ; 1024 ; 1    ; scan_code_to_number.mif ; ESB_A    ;
++-------------------------------------------------------------------+------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-------------------------+----------+
+Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in D:/pld/course_project/course_project.pin.
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Mar 28 09:36:59 2015
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off course_project -c course_project
+Info: Selected device EPF10K10QC208-4 for design "course_project"
+Info: Fitter is using the Classic Timing Analyzer
+Info: Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
+    Info: Assuming a global fmax requirement of 1000 MHz
+    Info: Not setting a global tsu requirement
+    Info: Not setting a global tco requirement
+    Info: Not setting a global tpd requirement
+Info: Inserted 8 logic cells in first fitting attempt
+Info: Started fitting attempt 1 on Sat Mar 28 2015 at 09:37:00
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info: Fitter placement operations beginning
+Info: Fitter placement operations ending: elapsed time is 00:00:01
+Info: Fitter routing operations beginning
+Info: Fitter routing operations ending: elapsed time is 00:00:00
+Info: Quartus II Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 200 megabytes
+    Info: Processing ended: Sat Mar 28 09:37:02 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

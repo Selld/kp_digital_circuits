@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="course_project">
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|decod:inst91|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cre.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|cnt_mod_10:inst66|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011" CBX_FILE_NAME="cmpr_cvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|cnt_mod_10:inst68|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00009" CBX_FILE_NAME="lpm_constant_874.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|div5:inst30|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00008" CBX_FILE_NAME="lpm_constant_274.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|mux2_4:inst47|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_2od.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|oxff:inst12|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_6j6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|cnt_mod_10:inst70|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00009" CBX_FILE_NAME="lpm_constant_874.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|mux2_1:inst52|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|mux_dac:inst6|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|cnt_mod_10:inst66|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00009" CBX_FILE_NAME="lpm_constant_874.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|cnt_mod_10:inst68|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011" CBX_FILE_NAME="cmpr_cvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|const0x30:inst51|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_rf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|decod:inst18|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_cre.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|div5:inst30|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010" CBX_FILE_NAME="cmpr_bvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|mux2_1_1:inst53|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_snd.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|ox00:inst14|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_qf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|course_project|cnt_mod_10:inst70|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00011" CBX_FILE_NAME="cmpr_cvf.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
